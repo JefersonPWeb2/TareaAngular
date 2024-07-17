@@ -32,6 +32,14 @@
   </ul>
   <button (click)="sayHello()">Hazme click</button>
 </div>
+<div>
+  <form>
+    <input type="text" name="name" [(ngModel)]="name">
+    <input type="text" name="age" [(ngModel)]="age">
+  </form>
+  <h2>Name: {{ name }}</h2>
+  <h2>Age: {{ age }}</h2>
+</div>
 <div class="black">
   <h1>{{ title }}</h1>
 </div>
