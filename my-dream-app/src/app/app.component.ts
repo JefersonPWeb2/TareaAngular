@@ -11,6 +11,8 @@ export class AppComponent {
   webpage : string;
   hobbies : string[];
   showHobbies : boolean;
+  users = ['ryan','joe','cameron','john'];
+  activated = false;
   constructor(){
     console.log("Constructor working...");
     this.name = "Jeferson Joao";
@@ -18,6 +20,9 @@ export class AppComponent {
     this.webpage = "http://www.unsa.edu.pe";
     this.hobbies = ["Futbol","Programación","Netflix"];
     this.showHobbies = false;
+  }
+  sayHello() {
+    alert("Hola Desde app.component");
   }
   showhobbies (){
     return true;
