@@ -1,7 +1,7 @@
 <router-outlet></router-outlet>
 
 <div class="black">
-  <h1> {{title}} </h1>
+  <h1> {{ title }} </h1>
 </div>
 <div class="ash">
   <h2>{{ name }}</h2>
@@ -20,8 +20,15 @@
     <input #hobby type="text" placeholder="hobby">
   </form>
   <app-hello-world>Aqui</app-hello-world>
+  <h1>Desde app.component</h1>
+  <form (submit)="addUser(newUser)">
+    <input type="=text" #newUser>
+    <button>Agregar Usuario</button>
+  </form>
   <ul>
-    <app-user *ngFor="let user of users" [nameUser]="user"></app-user>
+    <li *ngFor="let user of users">
+      {{ user }} <button (click)="deleteUser(user)">Borrar Usuario</button>
+    </li>
   </ul>
   <button (click)="sayHello()">Hazme click</button>
 </div>
